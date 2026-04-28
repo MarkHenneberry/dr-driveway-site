@@ -93,7 +93,8 @@ export default function Home() {
             pool surrounds across Cole Harbour and HRM.
           </p>
           <p className="hero-trust">
-            4.7&#9733; Google rating &bull; 30 reviews &bull; 98% recommended
+            Local Cole Harbour contractor &bull; 4.7&#9733; Google rating &bull; 98%
+            recommended on Facebook
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href={phoneHref}>
@@ -113,10 +114,6 @@ export default function Home() {
         <div>
           <strong>4.7-star</strong>
           <span>Google rating</span>
-        </div>
-        <div>
-          <strong>30</strong>
-          <span>Google reviews</span>
         </div>
         <div>
           <strong>98%</strong>
@@ -185,7 +182,8 @@ export default function Home() {
           <p className="eyebrow">Reviews</p>
           <h2>Local feedback from driveway and paving customers.</h2>
           <p className="review-proof">
-            4.7 stars from 30 Google reviews and 98% recommended on Facebook.
+            Local Cole Harbour contractor with a 4.7-star Google rating and 98%
+            recommended on Facebook.
           </p>
         </div>
         <div className="review-grid">
