@@ -30,10 +30,6 @@ const services = [
 
 const galleryProjects = [
   {
-    title: "Fresh asphalt driveway",
-    image: "/images/driveway-1.jpg",
-  },
-  {
     title: "Clean driveway finish",
     image: "/images/driveway-2.jpg",
   },
@@ -52,6 +48,10 @@ const galleryProjects = [
   {
     title: "Stairs and concrete detail",
     image: "/images/stairs.jpg",
+  },
+  {
+    title: "Fresh asphalt driveway",
+    image: "/images/driveway-1.jpg",
   },
 ];
 
