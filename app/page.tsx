@@ -4,27 +4,27 @@ const phoneHref = "tel:19028302400";
 const services = [
   {
     title: "Asphalt driveway paving",
-    copy: "New asphalt driveways built with proper base preparation, clean edges, and a smooth compacted finish.",
+    copy: "New asphalt driveway installs with proper prep and clean edges.",
   },
   {
     title: "Asphalt repairs & maintenance",
-    copy: "Crack repair, patching, rough spots, and damaged asphalt sections handled before they spread.",
+    copy: "Crack repair, patching, and resurfacing for worn asphalt.",
   },
   {
     title: "Concrete work - walkways, pads, and steps",
-    copy: "Concrete walkways, pads, steps, and detail work finished cleanly around homes and properties.",
+    copy: "Concrete walkways, pads, steps, and small structural work.",
   },
   {
     title: "Patios & outdoor spaces",
-    copy: "Outdoor living areas, patio surfaces, and practical hardscape upgrades with a clean finished look.",
+    copy: "Patio surfaces and outdoor areas built for clean everyday use.",
   },
   {
     title: "Pool surrounds & hardscaping",
-    copy: "Poolside surfaces, borders, and hardscape details designed for durability and tidy transitions.",
+    copy: "Pool surrounds, borders, and hardscape transitions.",
   },
   {
     title: "Residential & commercial projects",
-    copy: "Driveways, access areas, small lots, and property improvements for homes and local businesses.",
+    copy: "Driveways, access areas, and property surface upgrades.",
   },
 ];
 
@@ -89,12 +89,17 @@ export default function Home() {
           <p className="eyebrow">Cole Harbour, Nova Scotia</p>
           <h1>Asphalt paving, concrete work & outdoor surfaces in Cole Harbour.</h1>
           <p className="hero-copy">
-            Precision residential and commercial paving, patios, stairs, and
-            pool surrounds across Cole Harbour and HRM.
+            Precision paving, concrete, patios, stairs, and pool surrounds for
+            residential and commercial properties.
+          </p>
+          <p className="hero-cred">
+            Local Cole Harbour contractor specializing in clean, precise finishes.
+          </p>
+          <p className="hero-location">
+            Serving Cole Harbour, Dartmouth, and surrounding HRM communities.
           </p>
           <p className="hero-trust">
-            Local Cole Harbour contractor &bull; 4.7&#9733; Google rating &bull; 98%
-            recommended on Facebook
+            4.7&#9733; Google rating &bull; 98% recommended on Facebook
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href={phoneHref}>
@@ -107,21 +112,6 @@ export default function Home() {
         </div>
         <div className="hero-visual" aria-label="Finished asphalt driveway project">
           <img src="/images/driveway-1.jpg" alt="Finished asphalt driveway by Dr. Driveway" />
-        </div>
-      </section>
-
-      <section className="trust-bar" aria-label="Business reputation">
-        <div>
-          <strong>4.7-star</strong>
-          <span>Google rating</span>
-        </div>
-        <div>
-          <strong>98%</strong>
-          <span>recommended on Facebook</span>
-        </div>
-        <div>
-          <strong>Local</strong>
-          <span>Cole Harbour contractor</span>
         </div>
       </section>
 
@@ -143,6 +133,21 @@ export default function Home() {
               <h3>{project.title}</h3>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="trust-bar" aria-label="Business reputation">
+        <div>
+          <strong>4.7-star</strong>
+          <span>Google rating</span>
+        </div>
+        <div>
+          <strong>98%</strong>
+          <span>recommended on Facebook</span>
+        </div>
+        <div>
+          <strong>Local</strong>
+          <span>Cole Harbour contractor</span>
         </div>
       </section>
 
@@ -201,9 +206,9 @@ export default function Home() {
       <section className="quote-section">
         <div>
           <p className="eyebrow">Free Quotes</p>
-          <h2>Need paving, concrete, patio, stair, or pool surround work?</h2>
+          <h2>Call now for a free quote</h2>
           <p>
-            Call today for a free quote.
+            Need paving, concrete, patio, stair, or pool surround work?
           </p>
         </div>
         <a className="phone-link" href={phoneHref}>

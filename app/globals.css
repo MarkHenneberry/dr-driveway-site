@@ -48,7 +48,7 @@ img {
   justify-content: space-between;
   gap: 20px;
   width: 100%;
-  padding: 12px clamp(16px, 5vw, 72px);
+  padding: 14px clamp(16px, 5vw, 72px);
   color: var(--text);
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--line);
@@ -58,14 +58,14 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   min-width: 0;
 }
 
 .brand img {
   flex: 0 0 auto;
-  width: 54px;
-  height: 54px;
+  width: 46px;
+  height: 46px;
   object-fit: contain;
 }
 
@@ -108,7 +108,7 @@ img {
   grid-template-columns: minmax(0, 1fr) minmax(360px, 560px);
   align-items: center;
   gap: clamp(32px, 6vw, 80px);
-  padding: clamp(70px, 9vw, 118px) clamp(16px, 5vw, 72px);
+  padding: clamp(64px, 8vw, 104px) clamp(16px, 5vw, 72px);
   background: var(--surface);
 }
 
@@ -137,19 +137,33 @@ h1 {
   margin: 0;
   color: var(--text);
   font-size: clamp(2.55rem, 5.7vw, 5.4rem);
-  line-height: 1;
+  line-height: 0.96;
 }
 
 .hero-copy {
-  max-width: 680px;
-  margin: 24px 0 0;
+  max-width: 620px;
+  margin: 22px 0 0;
   color: var(--muted);
   font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+  line-height: 1.45;
+}
+
+.hero-cred,
+.hero-location {
+  max-width: 620px;
+  margin: 12px 0 0;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.hero-location {
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .hero-trust {
   max-width: 620px;
-  margin: 18px 0 0;
+  margin: 14px 0 0;
   color: var(--text);
   font-weight: 800;
 }
@@ -205,6 +219,7 @@ h1 {
   min-width: 0;
   padding: 22px clamp(14px, 3vw, 30px);
   background: var(--section);
+  text-align: center;
 }
 
 .trust-bar strong {
@@ -222,7 +237,7 @@ h1 {
 }
 
 .section {
-  padding: clamp(68px, 8vw, 104px) clamp(16px, 5vw, 72px);
+  padding: clamp(64px, 7vw, 96px) clamp(16px, 5vw, 72px);
 }
 
 .light-section {
@@ -270,6 +285,10 @@ h1 {
   gap: 18px;
 }
 
+.gallery-grid {
+  gap: 10px;
+}
+
 .service-card,
 .gallery-card,
 .review-card {
@@ -313,6 +332,7 @@ h1 {
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
+  border-radius: 4px;
 }
 
 .gallery-media {
@@ -327,10 +347,10 @@ h1 {
 }
 
 .gallery-card h3 {
-  padding: 14px 16px;
+  padding: 10px 12px;
   color: var(--muted);
-  font-size: 0.92rem;
-  font-weight: 800;
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .benefit-list {
@@ -397,7 +417,7 @@ h1 {
   padding: clamp(72px, 9vw, 112px) clamp(16px, 5vw, 72px);
   color: var(--text);
   text-align: center;
-  background: var(--section);
+  background: #eceff2;
   border-top: 1px solid var(--line);
 }
 
@@ -451,8 +471,8 @@ address {
   }
 
   .brand img {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
   }
 
   .brand small {
