@@ -2,39 +2,69 @@ const phoneDisplay = "(902) 830-2400";
 const phoneHref = "tel:19028302400";
 
 const services = [
-  "Asphalt driveway paving",
-  "Driveway resurfacing",
-  "Asphalt repairs",
-  "Concrete work",
-  "Commercial paving",
-  "Residential paving",
+  {
+    title: "Asphalt driveway paving",
+    copy: "New asphalt driveways built with proper base preparation, clean edges, and a smooth compacted finish.",
+  },
+  {
+    title: "Asphalt repairs & maintenance",
+    copy: "Crack repair, patching, rough spots, and damaged asphalt sections handled before they spread.",
+  },
+  {
+    title: "Concrete work - walkways, pads, and steps",
+    copy: "Concrete walkways, pads, steps, and detail work finished cleanly around homes and properties.",
+  },
+  {
+    title: "Patios & outdoor spaces",
+    copy: "Outdoor living areas, patio surfaces, and practical hardscape upgrades with a clean finished look.",
+  },
+  {
+    title: "Pool surrounds & hardscaping",
+    copy: "Poolside surfaces, borders, and hardscape details designed for durability and tidy transitions.",
+  },
+  {
+    title: "Residential & commercial projects",
+    copy: "Driveways, access areas, small lots, and property improvements for homes and local businesses.",
+  },
 ];
 
 const galleryProjects = [
   {
     title: "Fresh asphalt driveway",
-    image: "",
+    image: "/images/driveway-1.jpg",
   },
   {
-    title: "Clean driveway edge work",
-    image: "",
+    title: "Clean driveway finish",
+    image: "/images/driveway-2.jpg",
   },
   {
-    title: "Residential paving project",
-    image: "",
+    title: "Driveway and stair work",
+    image: "/images/driveway-stairs1.jpg",
+  },
+  {
+    title: "Patio and outdoor fireplace",
+    image: "/images/patio1.jpg",
+  },
+  {
+    title: "Pool surround project",
+    image: "/images/pool1.jpg",
+  },
+  {
+    title: "Stairs and concrete detail",
+    image: "/images/stairs.jpg",
   },
 ];
 
 const benefits = [
-  "Local and responsive",
+  "Cole Harbour based contractor",
   "Residential and commercial work",
-  "Clear quotes",
-  "Quality finish",
+  "Paving, concrete, patios, and hardscaping",
+  "Clean, detailed project finishes",
 ];
 
 const reviews = [
-  "Good service, friendly owner and fair price.",
-  "Very quick and did quality work at a competitive price.",
+  "Fair price and friendly service.",
+  "Quick work and a clean finish.",
   "Driveway looks brand new.",
 ];
 
@@ -57,10 +87,15 @@ export default function Home() {
       <section id="top" className="hero">
         <div className="hero-content">
           <p className="eyebrow">Cole Harbour, Nova Scotia</p>
-          <h1>Driveway paving, asphalt repair & concrete work in Cole Harbour.</h1>
+          <h1>Asphalt paving, concrete work & outdoor surfaces in Cole Harbour.</h1>
           <p className="hero-copy">
-            Residential and commercial paving services across Cole Harbour,
-            Dartmouth, Halifax, and HRM.
+            Professional residential and commercial paving, concrete, patio,
+            stair, and pool surround work across Cole Harbour, Dartmouth,
+            Halifax, and HRM.
+          </p>
+          <p className="hero-trust">
+            Locally serving Cole Harbour and HRM with residential and commercial
+            paving work.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href={phoneHref}>
@@ -69,6 +104,13 @@ export default function Home() {
             <a className="button button-secondary" href="#services">
               View Services
             </a>
+          </div>
+        </div>
+        <div className="hero-visual" aria-label="Finished asphalt driveway project">
+          <img src="/images/driveway-1.jpg" alt="Finished asphalt driveway by Dr. Driveway" />
+          <div className="hero-visual-caption">
+            <strong>Clean surfaces. Sharp edges. Durable finishes.</strong>
+            <span>Asphalt, concrete, patios, stairs, and pool surrounds.</span>
           </div>
         </div>
       </section>
@@ -92,41 +134,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="section light-section">
+      <section className="section dark-section gallery-section">
         <div className="section-heading">
-          <p className="eyebrow">Services</p>
-          <h2>Practical paving and concrete work for homes and businesses.</h2>
+          <p className="eyebrow">Project Gallery</p>
+          <h2>Finished surfaces that show the quality of the work.</h2>
         </div>
-        <div className="service-grid">
-          {services.map((service) => (
-            <article className="service-card" key={service}>
-              <span className="service-icon" aria-hidden="true" />
-              <h3>{service}</h3>
-              <p>
-                Reliable prep, clean edges, and a durable finish built for local
-                driveways, lots, and access areas.
-              </p>
+        <div className="gallery-grid">
+          {galleryProjects.map((project) => (
+            <article className="gallery-card" key={project.title}>
+              <div className="gallery-media">
+                <img src={project.image} alt={project.title} />
+              </div>
+              <h3>{project.title}</h3>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section dark-section">
+      <section id="services" className="section light-section">
         <div className="section-heading">
-          <p className="eyebrow">Project Gallery</p>
-          <h2>Recent paving work, ready for real project photos.</h2>
+          <p className="eyebrow">Services</p>
+          <h2>Paving, concrete, and outdoor surface work for homes and businesses.</h2>
         </div>
-        <div className="gallery-grid">
-          {galleryProjects.map((project, index) => (
-            <article className="gallery-card" key={project.title}>
-              <div className="gallery-media">
-                {project.image ? (
-                  <img src={project.image} alt={project.title} />
-                ) : (
-                  <span>Project photo {index + 1}</span>
-                )}
-              </div>
-              <h3>{project.title}</h3>
+        <div className="service-grid">
+          {services.map((service) => (
+            <article className="service-card" key={service.title}>
+              <span className="service-icon" aria-hidden="true" />
+              <h3>{service.title}</h3>
+              <p>{service.copy}</p>
             </article>
           ))}
         </div>
@@ -135,7 +170,7 @@ export default function Home() {
       <section className="section split-section">
         <div className="section-heading">
           <p className="eyebrow">Why Choose Us</p>
-          <h2>A local paving contractor focused on straight answers and clean results.</h2>
+          <h2>A local contractor focused on careful prep, clean work, and strong finishes.</h2>
         </div>
         <div className="benefit-list">
           {benefits.map((benefit) => (
@@ -150,7 +185,10 @@ export default function Home() {
       <section className="section light-section">
         <div className="section-heading">
           <p className="eyebrow">Reviews</p>
-          <h2>Local feedback from customers who value fair pricing and fast work.</h2>
+          <h2>Local feedback from driveway and paving customers.</h2>
+          <p className="review-proof">
+            4.7 stars from 30 Google reviews and 98% recommended on Facebook.
+          </p>
         </div>
         <div className="review-grid">
           {reviews.map((review) => (
@@ -167,10 +205,11 @@ export default function Home() {
       <section className="quote-section">
         <div>
           <p className="eyebrow">Free Quotes</p>
-          <h2>Call today and get your free quote</h2>
+          <h2>Need paving, concrete, patio, stair, or pool surround work?</h2>
           <p>
-            Dr. Driveway Asphalt Paving & Concrete serves Cole Harbour,
-            Dartmouth, Halifax, and surrounding HRM communities.
+            Call today for a free quote. Dr. Driveway Asphalt Paving & Concrete
+            serves Cole Harbour, Dartmouth, Halifax, and surrounding HRM
+            communities.
           </p>
         </div>
         <a className="phone-link" href={phoneHref}>
