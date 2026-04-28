@@ -56,10 +56,10 @@ const galleryProjects = [
 ];
 
 const benefits = [
-  "Cole Harbour based contractor",
+  "Local and responsive",
   "Residential and commercial work",
-  "Paving, concrete, patios, and hardscaping",
-  "Clean, detailed project finishes",
+  "Clear, honest quotes",
+  "Clean, precise finish",
 ];
 
 const reviews = [
@@ -73,7 +73,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Dr. Driveway home">
-          <span className="brand-mark">DR</span>
+          <img src="/images/logo.jpg" alt="Dr. Driveway Asphalt Paving & Concrete" />
           <span>
             <strong>Dr. Driveway</strong>
             <small>Asphalt Paving & Concrete</small>
@@ -89,13 +89,11 @@ export default function Home() {
           <p className="eyebrow">Cole Harbour, Nova Scotia</p>
           <h1>Asphalt paving, concrete work & outdoor surfaces in Cole Harbour.</h1>
           <p className="hero-copy">
-            Professional residential and commercial paving, concrete, patio,
-            stair, and pool surround work across Cole Harbour, Dartmouth,
-            Halifax, and HRM.
+            Precision residential and commercial paving, patios, stairs, and
+            pool surrounds across Cole Harbour and HRM.
           </p>
           <p className="hero-trust">
-            Locally serving Cole Harbour and HRM with residential and commercial
-            paving work.
+            4.7&#9733; Google rating &bull; 30 reviews &bull; 98% recommended
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href={phoneHref}>
@@ -108,10 +106,6 @@ export default function Home() {
         </div>
         <div className="hero-visual" aria-label="Finished asphalt driveway project">
           <img src="/images/driveway-1.jpg" alt="Finished asphalt driveway by Dr. Driveway" />
-          <div className="hero-visual-caption">
-            <strong>Clean surfaces. Sharp edges. Durable finishes.</strong>
-            <span>Asphalt, concrete, patios, stairs, and pool surrounds.</span>
-          </div>
         </div>
       </section>
 
@@ -138,6 +132,10 @@ export default function Home() {
         <div className="section-heading">
           <p className="eyebrow">Project Gallery</p>
           <h2>Finished surfaces that show the quality of the work.</h2>
+          <p>
+            Real driveway, concrete, patio, stair, and pool surround projects
+            completed with clean lines and careful finishing.
+          </p>
         </div>
         <div className="gallery-grid">
           {galleryProjects.map((project) => (
@@ -207,9 +205,7 @@ export default function Home() {
           <p className="eyebrow">Free Quotes</p>
           <h2>Need paving, concrete, patio, stair, or pool surround work?</h2>
           <p>
-            Call today for a free quote. Dr. Driveway Asphalt Paving & Concrete
-            serves Cole Harbour, Dartmouth, Halifax, and surrounding HRM
-            communities.
+            Call today for a free quote.
           </p>
         </div>
         <a className="phone-link" href={phoneHref}>
